@@ -1,0 +1,9 @@
+<form id="edit_form" method="post" style="padding:10px">
+<table class="editTable">
+	<tr><th>用户名</th><td><input type="hidden" name="id" value="{$user['id']}"/><input type="text" id="name" name="name" value="{$user['name']}"/><em>*</em></td></tr>
+	<tr><th>状态</th><td>{$statusHtml}</td></tr>
+	<tr><th>所属角色</th>	<td>{$roleHtml} <em>*</em></td></tr>
+	<tr><th for="name">密码</th><td><input type="password" name="password" value="" /><empty name="id"><em>*</em><else/><br/>如不修改密码请留空</empty></td></tr>
+	<tr><th for="name">真实姓名</th><td><input type="text" name="realName" value="{$user['realName']}"/></td></tr>
+</table>
+</form>

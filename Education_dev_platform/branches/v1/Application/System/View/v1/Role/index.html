@@ -1,0 +1,43 @@
+<extend name="./base_list" />
+
+<block name="search">
+	ID：<input type="text" name="id" placeholder="角色ID" style="width: 120px"></input>
+<!-- 	课程名称：<input type="text" name="name" placeholder="课程名称" style="width: 120px"></input>
+	所属栏目：{$channelHtml} 
+	所属龄段：{$stageHtml}
+	出版商：{$pressHtml}
+	课程类型：{$typeHtml} 
+	科目：{$subjectHtml}    
+	关键字：{$keysHtml}
+	标签：{$tagsHtml} -->
+	状态：{$statusHtml}
+</block>
+
+<block name="datagrid_img">
+    <div id="datagrid_img" class="datagrid_img" style="display: none;">
+    </div>
+</block>
+<block name="datagrid">
+		pagination:false, //分页栏 
+		idField : 'id',
+	    columns:[[ 
+            {field:'id',title:'ID',sortable:false,align:'right',width:60},
+            {field:'userId',title:'用户ID',sortable:false,width:100},
+            {field:'stageId',title:'龄段ID',sortable:false,width:80},
+            {field:'sex',title:'用户性别',sortable:false,width:100},
+            {field:'nickName',title:'角色昵称',sortable:false,width:80},
+            {field:'interests',title:'兴趣爱好',sortable:false,width:60},           
+            {field:'advantage',title:'强项',sortable:false,width:80},           
+            {field:'disAdvantage',title:'弱项',sortable:false,width:60},           
+            {field:'level',title:'荣誉等级',sortable:false,width:120},           
+            {field:'point',title:'积分',sortable:false,width:60},           
+            {field:'face',title:'头像',sortable:false,width:120},           
+			{field:'status',title:'状态',sortable:true,width:60,
+            	formatter:function(value,row,index){
+            		return value==1 ? "启用" : "<font color=red>禁用</font>";
+            	}
+            },            
+            {field:'addTime',title:'添加时间',sortable:true,width:180},
+        ]],
+</block>
+

@@ -1,0 +1,20 @@
+<extend name="./base_list" />
+<block name="search">
+	用户名：<input type="text" name="where[id]" placeholder="请输入用户名或ID" style="width: 160px"></input>
+	角色：{$roleHtml} 				 
+</block>
+<block name="datagrid">		
+	sortName:'id',//默认排序字段
+	sortOrder:'asc',//默认排序方式 'desc' 'asc'
+	idField : 'id',
+	columns:[[  
+        {field:'id',title:'ID',sortable:true,align:'right',width:60},
+        {field:'name',title:'用户名',sortable:true,width:150},
+        {field:'realName',title:'姓名',sortable:true,width:150},
+        {field:'roleName',title:'所属角色',sortable:false,width:150},
+        {field:'status',title:'状态',sortable:true,width:60,formatter:function(value,row,index){return value==1 ? "启用" : "<font color=red>禁用</font>";}},
+        {field:'lastTime',title:'最后登录时间',sortable:true,width:180},
+        {field:'lastIp',title:'最后登录IP',sortable:true,width:180},
+    ]],
+</block>
+

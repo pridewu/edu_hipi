@@ -1,0 +1,20 @@
+<extend name="./base_list" />
+<block name="search">
+	<b>所属产品：{$currProduct['name']}　</b>
+	ID：<input type="text" name="where[id]" placeholder="ID或广告位KEY" style="width: 160px"></input>
+	类型：{$asTypeHtml}
+</block>
+<block name="datagrid">
+	    sortName:'id',//默认排序字段
+		sortOrder:'asc',//默认排序方式 'desc' 'asc'
+		idField : 'id',
+	    columns:[[ 
+            {field:'id',title:'ID',sortable:true,align:'right',width:60},
+            {field:'asKey',title:'广告位KEY',sortable:true,width:100},
+            {field:'title',title:'广告位名称',sortable:true,width:200},
+            {field:'asType',title:'广告位类型',sortable:true,width:100},
+            {field:'showNum',title:'广告显示数量',sortable:true,width:80},
+            {field:'addTime',title:'添加时间',sortable:true,width:180},
+        ]],    
+</block>
+

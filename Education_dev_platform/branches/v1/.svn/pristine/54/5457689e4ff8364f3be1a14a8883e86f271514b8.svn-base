@@ -1,0 +1,50 @@
+<extend name="./base_list" />
+<block name="search">
+	<b>所属产品：{$currProduct['name']}　</b>
+	ID：<input type="text" name="where[id]" placeholder="ID或广告位KEY" style="width: 80px"></input>
+	所属广告位：{$adSpaceHtml}
+	分类：{$adClassHtml}
+	类型：{$adTypeHtml}
+	广告商：{$apHtml}
+	外部ID：<input type="text" name="where[adId]" placeholder="外部广告ID" style="width: 60px" />
+	状态：{$statusHtml}			
+</block>
+<block name="datagrid_img">
+    <div id="datagrid_img" class="datagrid_img" style="width:120px; display: none;">
+        <img id="imgsrc" src="" />
+    </div>
+</block>
+<block name="datagrid">
+	    sortName:'id',//默认排序字段
+		sortOrder:'desc',//默认排序方式 'desc' 'asc'
+		idField : 'id',
+	    columns:[[             
+            {field:'id',title:'ID',sortable:true,align:'right',width:60},
+            {field:'asId',title:'所属广告位',sortable:true,width:150},
+            {field:'adClass',title:'分类',sortable:true,width:100,formatter:function(value,row,index){return value==1 ? "<font color=red>外部广告</font>" : "内部广告";}},            
+            {field:'adType',title:'类型',sortable:true,width:100,formatter:function(value,row,index){return value==1 ? "<font color=red>视频</font>" : "图片";}},
+            {field:'apId',title:'广告商',sortable:true,width:100},
+            {field:'adId',title:'外部ID',sortable:true,width:100},
+            {field:'title',title:'标题',sortable:false,width:200},
+            {field:'content',title:'内容',sortable:false,width:280},
+            {field:'linkUrl',title:'访问地址',sortable:false,width:200},
+            {field:'sort',title:'排序',sortable:true,align:'center',width:80},
+            {field:'status',title:'状态',sortable:true,width:60,formatter:function(value,row,index){return value==1 ? "启用" : "<font color=red>禁用</font>";}},
+            {field:'addTime',title:'添加时间',sortable:true,width:180},
+        ]],
+        onMouseOverRow:function(e, rowIndex, rowData,field,value){
+            if(field == 'content' && value != ''){
+               $("#datagrid_img").show();
+               if($("#datagrid_img").height()+e.pageY > $(document).height()){
+                    e.pageY = e.pageY-$("#datagrid_img").height();
+               }
+               $("#datagrid_img").css("left",e.pageX).css("top",e.pageY);
+               fieldValue = eval("rowData.realContent");
+               $("#imgsrc").attr("src",fieldValue);
+            }
+       },  
+       onMouseOutRow:function(e,rowIndex, rowData){  
+           $("#datagrid_img").hide();
+       }, 
+</block>
+

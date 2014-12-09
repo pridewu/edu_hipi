@@ -1,0 +1,8 @@
+<?php if (!defined('THINK_PATH')) exit();?><form id="import_form" method="post" enctype="multipart/form-data">
+    <table class="editTable">
+        <tr><th>导入前说明</th><td><em style="font-style: normal;">(目前只支持“xls”格式文件，其他格式文件后续开发)</em></td></tr>
+        <tr><th>导入对象</th><td><?php echo ($dataTypeHtml); ?></td></tr>
+        <tr><th>核对字段</th><td><input type="text" id="checkField" name="checkField" style="width:200px;" />(检查文件头部的字段，多个请用英文逗号隔开)</td></tr>
+        <tr><th>导入的文件</th><td><input type="file" id="importFile" name="importFile" /></td></tr>
+    </table>
+</form>

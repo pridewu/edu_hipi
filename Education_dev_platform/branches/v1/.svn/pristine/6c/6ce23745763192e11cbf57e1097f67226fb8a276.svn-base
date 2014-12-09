@@ -1,0 +1,40 @@
+<extend name="./base_list" />
+<block name="menu">
+	<div onclick="config();" data-options="iconCls:'icon-edit'" {$buttonStyle['config']}>配置</div>
+	<div onclick="reloadConf();" data-options="iconCls:'icon-edit'" {$buttonStyle['configTpl']}>重载配置模板</div>
+    <!--<div onclick="configArea();" data-options="iconCls:'icon-edit'" {$buttonStyle['configArea']}>重载产品配置</div>-->
+	<div onclick="sync();" data-options="iconCls:'icon-edit'" {$buttonStyle['Sync']}>手动数据同步</div>
+</block>
+
+<block name="button">
+	<a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="config()" {$buttonStyle['config']}>配置</a>
+</block>
+<block name="datagrid">	
+	idField : 'id',
+	columns:[[ 
+	    {field:'id',title:'ID',sortable:true,align:'right',width:60},
+	    {field:'name',title:'名称',sortable:true,width:100},
+	    {field:'cKey',title:'配置KEY',sortable:true,width:130},
+	    {field:'templete',title:'配置文件',sortable:true,width:130},
+	    {field:'content',title:'内容',sortable:true,width:300},
+	    {field:'addTime',title:'添加时间',sortable:true,width:180},
+	]],
+</block>
+
+<block name="js">
+edit_W = 600;
+edit_H = 500;
+
+function reloadConf(){
+	postData("__URL__/reloadConf",true,"",datagrid,"one");
+}
+
+function config(rowIndex,rowData){
+	editData(rowIndex,rowData,"配置信息",'#edit_form',datagrid,"{:U('ProConfig/config')}",edit_W,edit_H);
+}
+	
+function sync(){
+	postData("__URL__/sync",true,"",datagrid,"one");
+}	
+</block>	
+

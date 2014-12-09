@@ -1,0 +1,47 @@
+<extend name="./base_list" />
+<block name="button">
+    <style type="text/css">
+        #search_form a{display: none}
+    </style>
+    <a href="#" class="easyui-linkbutton" iconCls="icon-sum" plain="true" onclick="count()" {$buttonStyle['count']}>统计</a>
+</block>
+<block name="datagrid_img">
+    <div id="datagrid_img" class="datagrid_img" style="width:120px; display: none;">
+        <img id="imgsrc" src="" />
+    </div>
+</block>
+<block name="datagrid">
+        idField:'id',
+	    columns:[[                        
+            {field:'id',title:'ID',sortable:true,align:'right',width:100},
+            {field:'fileType',title:'附件类型',sortable:true,width:100},
+            {field:'url',title:'附件地址',sortable:false,width:200},
+            {field:'size',title:'附件大小(kb)',sortable:false,width:100},
+            {field:'memo',title:'附件备注',sortable:false,width:200},
+            {field:'addTime',title:'添加时间',sortable:true,width:150},
+        ]],
+        onMouseOverRow:function(e, rowIndex, rowData,field,value){
+            if(field == 'url' && value != ''){
+               $("#datagrid_img").show();
+               if($("#datagrid_img").height()+e.pageY > $(document).height()){
+                    e.pageY = e.pageY-$("#datagrid_img").height();
+               }
+               $("#datagrid_img").css("left",e.pageX).css("top",e.pageY);
+               fieldValue = eval("rowData.realUrl");
+               $("#imgsrc").attr("src",fieldValue);
+            }
+       },  
+       onMouseOutRow:function(e,rowIndex, rowData){  
+           $("#datagrid_img").hide();
+       },
+</block>
+<block name="js">
+function del(rowIndex,rowData){
+    edit_W = 350;
+    edit_H = 200;
+	editData(rowIndex,rowData,"删除数据",'#edit_form',datagrid,"__URL__/del",edit_W,edit_H);
+}
+function count(){
+	post("__URL__/count",true,null,$.serializeObject($('#search_form')));
+}
+</block>

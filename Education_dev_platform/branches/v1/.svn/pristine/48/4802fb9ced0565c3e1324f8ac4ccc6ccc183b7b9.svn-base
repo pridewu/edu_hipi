@@ -1,0 +1,45 @@
+
+<form id="upfile_form" method="post"  enctype="multipart/form-data">
+	<table class="editTable">
+	<tr>
+		<th>文件类型</th>
+		<td>{$typeName}<input type="hidden" name="fileType" value="{$fileType}"/></td>
+	</tr>
+	<tr>
+		<th>允许扩展名</th>
+		<td>{$exName}</td>
+	</tr>
+	<if condition="$fileType eq 1">
+	<tr>
+		<th>缩略图</th>
+		<td>{$thumb}<input type="hidden" name="thumb" value="{$thumb}"/></td>
+	</tr>
+	</if>
+	<tr>
+		<th>文件备注</th>
+		<td><input type="text" name="memo" value="{$memo}" style="width:300px"/></td>
+	</tr>
+	<tr>
+		<th>文件</th>
+		<td>
+			<div><input type="file" name="upFile[]" /></div>
+			<if condition="$isMore">
+				<div id="more_file"></div>
+				<input type="button" id="add_file" value="添加" />
+			</if>
+		</td>
+	</tr>				
+	</table>
+</form>   	
+
+<script>
+
+$(function(){
+	$("#add_file").click(function(){			
+		$("#more_file").append("<div><input type='file' name='upFile[]' /> <input type='button' onclick='removeFile(this)' value='移除'/>");
+	});
+})
+function removeFile(obj){
+	$(obj).parent().remove();
+}	
+</script>

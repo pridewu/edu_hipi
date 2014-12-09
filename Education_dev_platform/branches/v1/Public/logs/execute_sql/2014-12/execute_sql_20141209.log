@@ -1,0 +1,5 @@
+SELECT * FROM `t_stage` ORDER BY sort asc LIMIT 0,50  
+SELECT * FROM `t_stage` ORDER BY sort asc LIMIT 0,50  
+SELECT * FROM `t_stage` ORDER BY id asc LIMIT 0,50  
+SELECT * FROM `t_resource` ORDER BY id asc LIMIT 0,50  
+SELECT * FROM `t_section` ORDER BY sort asc LIMIT 0,50  

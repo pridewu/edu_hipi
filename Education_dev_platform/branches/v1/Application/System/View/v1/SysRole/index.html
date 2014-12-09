@@ -1,0 +1,20 @@
+<extend name="./base_list" />
+<block name="search">
+	角色：<input type="text" name="where[id]" placeholder="请输入角色名称或ID" style="width: 160px"></input>	
+</block>
+<block name="datagrid">		
+	sortName:'id',//默认排序字段
+	sortOrder:'asc',//默认排序方式 'desc' 'asc'
+	idField : 'id',
+	columns:[[  
+	    {field:'id',title:'ID',sortable:true,align:'right',width:60},
+	    {field:'name',title:'角色名',sortable:true,width:200},
+        {field:'isSuper',title:'超级管理',sortable:true,width:100,formatter: function(value,row,index){return value==1 ? '<font color=red>是</font>' : '否';}},
+		{field:'addTime',title:'添加时间',sortable:true,width:180},
+	]],
+</block>
+
+<block name="js">
+edit_W = 800;
+edit_H = 500;
+</block>

@@ -1,0 +1,3 @@
+<?php
+//000000000000a:1:{i:3;a:2:{i:2;a:13:{s:2:"id";s:1:"2";s:4:"asId";s:1:"3";s:7:"adClass";s:1:"1";s:4:"apId";s:4:"1001";s:4:"adId";s:5:"23424";s:6:"adType";s:1:"0";s:5:"title";s:6:"dsfdsf";s:7:"content";s:0:"";s:7:"linkUrl";s:0:"";s:4:"sort";s:1:"0";s:4:"time";s:3:"0.0";s:6:"status";s:1:"1";s:7:"addTime";s:19:"2014-11-26 11:35:58";}i:1;a:13:{s:2:"id";s:1:"1";s:4:"asId";s:1:"3";s:7:"adClass";s:1:"0";s:4:"apId";s:1:"0";s:4:"adId";s:1:"0";s:6:"adType";s:1:"0";s:5:"title";s:4:"sdfd";s:7:"content";s:0:"";s:7:"linkUrl";s:0:"";s:4:"sort";s:1:"0";s:4:"time";s:3:"0.0";s:6:"status";s:1:"1";s:7:"addTime";s:19:"2014-11-26 11:03:27";}}}
+?>

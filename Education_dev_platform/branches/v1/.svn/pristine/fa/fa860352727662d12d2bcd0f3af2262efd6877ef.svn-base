@@ -1,0 +1,41 @@
+<form id="edit_form" method="post" style="padding:10px">
+	<table class="editTable">
+		<tr>
+			<th>角色名</th>
+			<td><input type="hidden" name="id" value="{$role['id']}"/><input type="text" id="name" name="name" value="{$role['name']}"/><em>*</em></td>
+		</tr>
+		<tr>
+			<th>超级管理</th>
+			<td><input type="radio" value="1" name="isSuper" id="isSuper1" {$role['isSuper'] ? 'checked="checked"' : ''}><label for="isSuper1">是</label>　　
+				<input type="radio" value="0" name="isSuper" id="isSuper0" {$role['isSuper'] ? '' : 'checked="checked"'}><label for="isSuper0">否</label>
+				<span>(超级组将拥有全部的权限，不论下方小项是否设置，请谨慎！)</span>				
+			</td>
+		</tr>
+		<tr>
+			<th>操作权限</th>
+			<td>
+				<foreach name="authStructure['nav']" item="nav1" key="k1">
+					<div style="line-height:30px; font-weight:bold;">{$nav1.name}：</div>					
+					<foreach name="nav1['item']" item="nav2" key="k2">
+						<div style="margin-left:40px;">
+						<h5>{$nav2.name}：</h5>
+						<foreach name="nav2['item']" item="nav3" key="k3">
+							<php>
+                                if(count(explode('_',$k3))>=2){ 
+                                    $key = $k3; 
+                                }else{
+                                    $key = $k2.'_'.$k3;
+                                }
+                            </php>
+							<h6>
+							<input type="checkbox" name="auth[nav][{$key}]" value="1" id="auth_nav_{$key}" {$role['auth']['nav'][$key]==1?'checked="checked"':''} />
+							<label for="auth_nav_{$key}">{$nav3}</label>
+							</h6>
+						</foreach>
+						</div>
+					</foreach>
+				</foreach>
+			</td>
+		</tr>
+	</table>
+</form>

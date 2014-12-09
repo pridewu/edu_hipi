@@ -1,0 +1,126 @@
+<form id="edit_form" method="post" style="padding:10px">
+<table class="editTable">
+	<tr>
+		<th>课程名称</th>
+		<td>
+			<input type="hidden" id="id" name="id" value="{$course['id']}"/>
+			<input type="text" id="name" name="name" value="{$course['name']}"/><em>*</em>
+		</td>
+	</tr>
+	<tr><th>所属栏目</th><td>{$channelHtml} <em>*</em></td></tr>
+	<tr><th>龄段</th><td>
+		<input type="hidden" id="aastage" name="stage" value="{$course['stage']}"/>
+		<input id="combobox_stage"  class="easyui-combobox" data-options="valueField:'id',textField:'name'" style="width:150px" /> (支持多选)
+	</td></tr>
+	<tr><th>出版商</th><td>{$pressHtml} <em>*</em></td></tr>
+	<tr><th>学期</th><td>{$sessionHtml} <em>*</em></td></tr>
+	<tr><th>类型</th><td>{$typeHtml} <em>*</em></td></tr>
+	<tr><th>科目</th><td>{$subjectHtml} <em>*</em></td></tr>
+	<tr>
+		<th>价格</th>
+		<td>
+			<input type="text" id="price" name="price" value="{$course['price']}"/><em>*</em>
+		</td>
+	</tr>
+	<tr>
+		<th>期中考试题库ID</th>
+		<td>
+			<input type="text" id="midLibId" name="midLibId" value="{$course['midLibId']}"/><em>*</em>
+		</td>
+	</tr>
+	<tr>
+		<th>期末考试题库ID</th>
+		<td>
+			<input type="text" id="finalLibId" name="finalLibId" value="{$course['finalLibId']}"/><em>*</em>
+		</td>
+	</tr>
+	<tr>
+		<th>知识点ID</th>
+		<td>
+			<input type="text" id="topicIds" name="topicIds" value="{$course['topicIds']}"/><em>*</em>
+		</td>
+	</tr>
+	<tr><th>关键字</th><td>
+		<input type="hidden" id="aakeys" name="keys" value="{$course['keys']}"/>
+		<input id="combobox_keys"  class="easyui-combobox" data-options="valueField:'id',textField:'name'" style="width:150px" /> (支持多选)
+	</td></tr>
+	<tr>
+		<th>图片地址</th>
+		<td>
+			<textarea name="imgUrl" id="imgUrl" cols="50" rows="3">{$course['imgUrl']}</textarea>
+			<a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" 
+				onclick="upfileDialog(1,'{$thumb}','课程图片：{$course[name]}',1,1,'#imgUrl','\r\n')"></a>
+		</td>
+	</tr>
+	<tr>
+		<th>链接地址</th>
+		<td>
+			<input type="text" id="linkUrl" name="linkUrl" value="{$course['linkUrl']}"/><em>*</em>
+		</td>
+	</tr>
+	<tr>
+		<th>机构</th>
+		<td>
+			<input type="text" id="organization" name="organization" value="{$course['organization']}"/><em>*</em>
+		</td>
+	</tr>
+	<tr>
+		<th>讲师</th>
+		<td>
+			<input type="text" id="lecturer" name="lecturer" value="{$course['lecturer']}"/><em>*</em>
+		</td>
+	</tr>
+	<tr>
+		<th>课程描述</th>
+		<td>
+			<textarea name="description" id="description" cols="50" rows="3">{$course['description']}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<th>排序</th>
+		<td><input type="text" id="sort" name="sort" value="{$course['sort']}"/></td>
+	</tr>
+	<tr><th>状态</th><td>{$statusHtml} <em>*</em></td></tr>
+</table>
+</form>
+
+<script>
+$(function(){	
+	
+	/* 龄段多选框  */
+	$("#combobox_stage").combobox({
+		multiple:true,
+		separator:',',
+		onSelect: function(){			
+			var vals = $("#combobox_stage").combobox('getValues');
+			$("#aastage").val(vals);
+		},
+		onUnselect:function(){
+			var vals = $("#combobox_stage").combobox('getValues');
+			$("#aastage").val(vals)
+		},	
+		onLoadSuccess: function(){
+			$("#combobox_stage").combobox("setValues","{$course['stage']}".split(','));
+		},		
+	}).combobox('reload',"{:U('Course/load')}" + "?type=stage");
+	
+	/* 关键字多选框  */
+	$("#combobox_keys").combobox({
+		multiple:true,
+		separator:',',
+		onSelect: function(){			
+			var vals = $("#combobox_keys").combobox('getValues');
+			$("#aakeys").val(vals);
+		},
+		onUnselect:function(){
+			var vals = $("#combobox_keys").combobox('getValues');
+			$("#aakeys").val(vals)
+		},	
+		onLoadSuccess: function(){
+			$("#combobox_keys").combobox("setValues","{$course['keys']}".split(','));
+		},		
+	}).combobox('reload',"{:U('Course/load')}" + "?type=key");
+		
+});
+
+</script>

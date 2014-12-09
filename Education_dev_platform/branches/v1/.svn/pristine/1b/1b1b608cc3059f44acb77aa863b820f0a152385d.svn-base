@@ -1,0 +1,35 @@
+
+<div id="upfile_mt" class="easyui-tabs" data-options="fit:true,border:false">  
+   	<div title="活动设置" style="padding:10px;">
+		<form id="edit_form" method="post" style="padding:10px">
+		<table class="editTable">
+			<tr><th>活动类型</th><td><input type="hidden" name="id" value="{$activity['id']}"/>{$actTypeHtml}<em>*</em></td></tr>	
+			<tr><th>标题</th><td><input type="text" id="title" name="title" value="{$activity['title']}"/><em>*</em></td></tr>
+			<tr><th>分类KEY</th><td><input type="text" id="classKey" name="classKey" value="{$activity['classKey']}"/></td></tr>
+			<tr><th>开始时间</th><td><input class="easyui-datetimebox" id="beginTime" name="beginTime" data-options="required:true,showSeconds:false" value="{$activity[beginTime]}" style="width:150px"></td></tr>
+			<tr><th>结束时间</th><td><input class="easyui-datetimebox" id="endTime" name="endTime" data-options="required:true,showSeconds:false" value="{$activity[endTime]}" style="width:150px"></td></tr>
+			<tr><th>活动规则</th><td><textarea name="rule" id="rule" cols="50" rows="6">{$activity['rule']}</textarea><em>*</em><br/>格式：请参考规则参数说明</td></tr>			
+			<tr><th>图片</th><td><textarea name="imgUrl" id="imgUrl" cols="40" rows="3">{$activity['imgUrl']}</textarea><a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="upfileDialog('{$currProduct['id']}',1,'','活动图片：{$activity[title]}',0,1,'#imgUrl','\r\n')"></a><br/>三张图片，按顺序为即将开始，进行中，已结束</td></tr>	
+			<tr><th>跳转地址</th><td><input type="text" id="linkUrl" name="linkUrl" value="{$channel['linkUrl']}"/></td></tr>
+			<tr><th>活动说明</th><td><textarea name="info" id="info" cols="50" rows=5>{$activity['info']}</textarea>
+			<tr><th>规则说明</th><td><textarea name="ruleInfo" id="ruleInfo" cols="50" rows=5>{$activity['ruleInfo']}</textarea>
+			<tr><th>排序</th><td><input type="text" id="sort" name="sort" value="{$activity['sort']}"/></td></tr>
+			<tr><th>状态</th><td>{$statusHtml} <em>*</em></td></tr>
+		</table>
+		</form>		
+	</div>
+	<div title="规则参数说明" style="padding:10px;">
+		<table class="editTable">
+			<tr><th>活动类型</th><th>参数名</th><th>说明</th></tr>
+			<tr><th rowspan="6">投票</th><td><input type="text" value="option_isUp" readonly /></td><td>用户是否可以上传选项（0－否，1-是，默认0）</td></tr>
+			<tr><td><input type="text" value="option_upMaxNum" readonly /></td><td>用户可以上传几个选项(0为不限，默认为0)</td></tr>
+			<tr><td><input type="text" value="vote_maxNum" readonly /></td><td>用户最多可投票数（0为不限，默认0）</td></tr>
+			<tr><td><input type="text" value="vote_optMaxNum" readonly /></td><td>用户最多可投几项（0为不限,默认0)</td></tr>
+			<tr><td><input type="text" value="vote_oneOptMaxNum" readonly /></td><td>用户向同一选顶可投票数(0为不限，默认0</td></tr>
+			<tr><td><input type="text" value="vote_isMe" readonly /></td><td>是否可投自身上传的选项（0－否，1-是，默认0)</td></tr>
+			<tr><th rowspan="3">抽奖</th><td><input type="text" value="lottery_dayNum" readonly /></td><td>用户每天可抽几次（0－不限，默认0）</td></tr>
+			<tr><td><input type="text" value="lottery_maxNum" readonly /></td><td>用户总的可以抽几次（0－不限，默认0）</td></tr>
+		</table>
+	</div>
+</div>
+

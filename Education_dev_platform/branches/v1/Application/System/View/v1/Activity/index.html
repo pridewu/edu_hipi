@@ -1,0 +1,66 @@
+<extend name="./base_list" />
+<block name="search">
+	<b>所属产品：{$currProduct['name']}　</b>
+	ID：<input type="text" name="where[id]" placeholder="请输入ID" style="width: 160px"></input>
+	活动类型：{$actTypeHtml}
+	状态：{$statusHtml}
+</block>
+<block name="datagrid_img">
+    <div id="datagrid_img" class="datagrid_img" style="display: none;">
+        
+    </div>
+</block>
+<block name="datagrid">
+	    sortName:'sort',//默认排序字段
+		sortOrder:'asc',//默认排序方式 'desc' 'asc'
+		idField : 'id',
+	    columns:[[  
+            {field:'id',title:'ID',sortable:true,align:'right',width:60},                        
+            {field:'actType',title:'活动类型',sortable:true,width:80},
+            {field:'title',title:'标题',sortable:false,width:120},
+            {field:'classKey',title:'分类KEY',sortable:false,width:120},                                  
+            {field:'imgUrl',title:'图片',sortable:false,width:150},           
+            {field:'beginTime',title:'开始时间',sortable:true,width:180},
+            {field:'endTime',title:'结束时间',sortable:true,width:180},
+            {field:'status',title:'状态',sortable:true,width:60,formatter:function(value,row,index){return value==1 ? "启用" : "<font color=red>禁用</font>";}},
+            {field:'linkUrl',title:'跳转地址',sortable:false,width:200},
+            {field:'sort',title:'排序',sortable:true,width:60},
+            {field:'addTime',title:'添加时间',sortable:true,width:180},
+        ]],
+        onMouseOverRow:function(e, rowIndex, rowData,field,value){
+            if(field == 'imgUrl' && value != ''){
+               var fieldValue = '';
+               fieldValue = eval("rowData.realImgUrl");
+               var imgArr = fieldValue.split(",");
+               var imgStr = '';
+               //alert(imgArr.length);
+               if(imgArr.length>1){
+                    for(var i=0;i<(imgArr.length);i++){
+                         imgStr += '<p><img src="'+imgArr[i]+'" /></p>';
+                    }
+               }else{
+                    imgStr = '<p><img src="'+fieldValue+'" /></p>';
+               }
+               $("#datagrid_img").html(imgStr);
+               $("#datagrid_img").show();
+               if($("#datagrid_img").height()+e.pageY > $(document).height()){
+                    e.pageY = e.pageY-$("#datagrid_img").height();
+               }
+               $("#datagrid_img").css("left",e.pageX).css("top",e.pageY);
+            }
+       },  
+       onMouseOutRow:function(e,rowIndex, rowData){  
+           $("#datagrid_img").hide();
+       },
+</block>
+
+<block name="js">
+edit_W = 800;
+edit_H = 500;
+/*
+function del(rowIndex,rowData){
+    edit_W = 350;
+    edit_H = 200;
+	editData(rowIndex,rowData,"删除数据",'#edit_form',datagrid,"__URL__/del",edit_W,edit_H);
+}*/
+</block>

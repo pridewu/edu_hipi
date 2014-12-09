@@ -1,0 +1,11 @@
+<form id="edit_form" method="post" style="padding:10px">
+<table class="editTable">
+	<tr><th width='100'>附件类型</th><td>{$upfile['fileType']}
+            <input type="hidden" name="id" value="{$upfile['id']}" />
+        </td></tr>
+    <tr><th>附件地址</th><td><a href="__UPFILE__/{$upfile['url']}" target="_blank">{$upfile['url']}</a></td></tr>
+    <tr><th>附件大小</th><td>{$upfile['size']}</td></tr>
+    <tr><th>附件备注</th><td><input type="text" name="memo" value="{$upfile['memo']}" /></td></tr>
+    <tr><th>添加时间</th><td>{$upfile['addTime']}</td></tr>
+</table>
+</form>	

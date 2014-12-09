@@ -1,0 +1,43 @@
+<layout name="layout" />
+
+<div data-options="region:'center',split:true" style="overflow: hidden;">
+	
+	<noscript>您的浏览器暂不支持脚本功能，请开启脚本支持</noscript>
+	<div style="font-size:30px;letter-spacing:20px; padding:80px; text-align:center">__TITLE__管理系统</div>
+	<div id="win" class="easyui-window" title="用户登录" style="width:320px;height:240px"  
+	       data-options="collapsible:false,minimizable:false,maximizable:false,closable:false,resizable:false">  
+	    <form id="fLogin" method="post" style="padding:20px 35px;">  
+		    <div>  
+		        <label for="userName">用户名：</label>  
+		        <input type="text" name="userName"  style="width:150px;" />  
+		    </div> 
+		    <br/>
+		    <div>  
+		        <label for="password">密　码：</label>  
+		        <input type="password" name="password" style="width:150px;" />  
+		    </div>		   
+		    <div id="info" style="color:red;text-align:center; padding:10px 0px;">&nbsp;</div>
+		    <div>
+		    	<label>　　　　</label>
+		    	<input id="btnLogin" type="submit" value="登录" style="padding:5px 15px"/>		    
+		    </div>
+		</form>   
+	</div>
+</div>
+<script>
+$('#fLogin').form({
+	url:"{:U('Public/login?ajax=true')}",
+    onSubmit: function(){   
+        // do some check   
+        // return false to prevent submit;   
+    },   
+    success:function(data){
+     	var data = eval('(' + data + ')');
+    	if(data.status){
+    		top.location=data.url;
+    	}else{
+    		$("#info").html(data.info);
+    	}  
+    }   
+}); 
+</script>

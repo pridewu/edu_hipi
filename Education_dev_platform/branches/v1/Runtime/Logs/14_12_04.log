@@ -1,0 +1,1099 @@
+[ 2014-12-04T13:44:40+08:00 ] 127.0.0.1 /System/Public/login/ajax/true.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000913s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.001493s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003026s ]
+DEBUG: $loginNum:5
+DEBUG: $loginNum2:4
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001883s ]
+SQL: SELECT `id`,`lastTime`,`lastIp` FROM `t_sys_user` WHERE ( `name` = 'admin' ) AND ( `password` = '21232f297a57a5a743894a0e4a801fc3' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000726s ]
+SQL: UPDATE `t_sys_user` SET `lastTime`='2014-12-04 13:44:37',`lastIp`='127.0.0.1' WHERE ( `id` = 1 ) [ RunTime:0.000604s ]
+
+[ 2014-12-04T13:46:04+08:00 ] 127.0.0.1 /System/Notice/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001556s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.001948s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008212s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.000956s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000764s ]
+SQL: SHOW COLUMNS FROM `t_notice` [ RunTime:0.000963s ]
+NOTIC: [8] Uninitialized string offset: 0 E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 139 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 90 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\NoticeModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_notice` ORDER BY id asc LIMIT 0,50   [ RunTime:0.000598s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_notice` LIMIT 1   [ RunTime:0.000554s ]
+
+[ 2014-12-04T13:53:27+08:00 ] 127.0.0.1 /System/Notice/add?_=1417672407218
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001657s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.005109s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008062s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.003002s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000904s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000282s ]
+NOTIC: [8] Undefined index: id E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\d6821132264b0d56937f045c75abb51c.php 第 7 行.
+NOTIC: [8] Undefined index: description E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\d6821132264b0d56937f045c75abb51c.php 第 8 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045214s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045397s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002471s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003015s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002666s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002887s ]
+
+[ 2014-12-04T13:54:29+08:00 ] 127.0.0.1 /System/Topic/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001543s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.002019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005143s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001135s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000764s ]
+SQL: SHOW COLUMNS FROM `t_topic` [ RunTime:0.000949s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\TopicModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_topic` ORDER BY id asc LIMIT 0,50   [ RunTime:0.000646s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_topic` LIMIT 1   [ RunTime:0.000585s ]
+
+[ 2014-12-04T14:40:52+08:00 ] 127.0.0.1 /System/Topic/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000928s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.001752s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003429s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001186s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.002203s ]
+SQL: SHOW COLUMNS FROM `t_topic` [ RunTime:0.001047s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\TopicModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_topic` WHERE ( `sort` = 0 ) ORDER BY sort asc LIMIT 0,50   [ RunTime:0.000821s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_topic` WHERE ( `sort` = 0 ) LIMIT 1   [ RunTime:0.000590s ]
+
+[ 2014-12-04T14:40:53+08:00 ] 127.0.0.1 /System/Topic/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000930s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.001556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003312s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001329s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000839s ]
+SQL: SHOW COLUMNS FROM `t_topic` [ RunTime:0.001015s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\TopicModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_topic` WHERE ( `sort` = 0 ) ORDER BY sort desc LIMIT 0,50   [ RunTime:0.000760s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_topic` WHERE ( `sort` = 0 ) LIMIT 1   [ RunTime:0.000616s ]
+
+[ 2014-12-04T14:40:54+08:00 ] 127.0.0.1 /System/Topic/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000614s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.000793s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002008s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001012s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.001665s ]
+SQL: SHOW COLUMNS FROM `t_topic` [ RunTime:0.000922s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\TopicModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_topic` WHERE ( `sort` = 0 ) ORDER BY sort asc LIMIT 0,50   [ RunTime:0.000717s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_topic` WHERE ( `sort` = 0 ) LIMIT 1   [ RunTime:0.000594s ]
+
+[ 2014-12-04T14:43:48+08:00 ] 127.0.0.1 /System/Topic/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000847s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.001564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003503s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.002061s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000740s ]
+SQL: SHOW COLUMNS FROM `t_topic` [ RunTime:0.001670s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\TopicModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_topic` ORDER BY id asc LIMIT 0,50   [ RunTime:0.000694s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_topic` LIMIT 1   [ RunTime:0.000646s ]
+
+[ 2014-12-04T15:01:53+08:00 ] 127.0.0.1 /System/Topic/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000607s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.000848s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002140s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001686s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.001664s ]
+SQL: SHOW COLUMNS FROM `t_topic` [ RunTime:0.002329s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\TopicModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_topic` ORDER BY id asc LIMIT 0,50   [ RunTime:0.001736s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_topic` LIMIT 1   [ RunTime:0.001509s ]
+
+[ 2014-12-04T15:02:24+08:00 ] 127.0.0.1 /System/Topic/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000879s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.001481s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003240s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001057s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000752s ]
+SQL: SHOW COLUMNS FROM `t_topic` [ RunTime:0.000991s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\TopicModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_topic` ORDER BY id asc LIMIT 0,50   [ RunTime:0.000745s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_topic` LIMIT 1   [ RunTime:0.000600s ]
+
+[ 2014-12-04T15:11:47+08:00 ] 127.0.0.1 /System/Topic/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002283s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.001840s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005823s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001613s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.001087s ]
+SQL: SHOW COLUMNS FROM `t_topic` [ RunTime:0.001353s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\TopicModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_topic` ORDER BY id asc LIMIT 0,50   [ RunTime:0.000895s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_topic` LIMIT 1   [ RunTime:0.001340s ]
+
+[ 2014-12-04T15:58:18+08:00 ] 127.0.0.1 /System/Topic/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000898s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.001362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003456s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.004620s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000883s ]
+SQL: SHOW COLUMNS FROM `t_topic` [ RunTime:0.001737s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\TopicModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_topic` ORDER BY id asc LIMIT 0,50   [ RunTime:0.001361s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_topic` LIMIT 1   [ RunTime:0.001457s ]
+
+[ 2014-12-04T16:18:27+08:00 ] 127.0.0.1 /System/Topic/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000879s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.001530s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003097s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001259s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000690s ]
+SQL: SHOW COLUMNS FROM `t_topic` [ RunTime:0.000962s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\TopicModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_topic` WHERE ( `sort` = 0 ) ORDER BY sort asc LIMIT 0,50   [ RunTime:0.000644s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_topic` WHERE ( `sort` = 0 ) LIMIT 1   [ RunTime:0.000580s ]
+
+[ 2014-12-04T16:18:29+08:00 ] 127.0.0.1 /System/Topic/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000718s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.001383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002878s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001153s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000809s ]
+SQL: SHOW COLUMNS FROM `t_topic` [ RunTime:0.000869s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\TopicModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_topic` WHERE ( `sort` = 0 ) ORDER BY status asc LIMIT 0,50   [ RunTime:0.001108s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_topic` WHERE ( `sort` = 0 ) LIMIT 1   [ RunTime:0.000607s ]
+
+[ 2014-12-04T16:18:32+08:00 ] 127.0.0.1 /System/Topic/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000701s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.000958s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002477s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001147s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000791s ]
+SQL: SHOW COLUMNS FROM `t_topic` [ RunTime:0.000954s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\TopicModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_topic` WHERE ( `sort` = 0 ) ORDER BY addTime asc LIMIT 0,50   [ RunTime:0.000835s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_topic` WHERE ( `sort` = 0 ) LIMIT 1   [ RunTime:0.000578s ]
+
+[ 2014-12-04T16:20:22+08:00 ] 127.0.0.1 /System/Topic/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000701s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.000995s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002406s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001242s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000777s ]
+SQL: SHOW COLUMNS FROM `t_topic` [ RunTime:0.000837s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\TopicModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_topic` ORDER BY id asc LIMIT 0,50   [ RunTime:0.000746s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_topic` LIMIT 1   [ RunTime:0.000569s ]
+
+[ 2014-12-04T16:21:09+08:00 ] 127.0.0.1 /System/Topic/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000662s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.001103s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002594s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001570s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.002228s ]
+SQL: SHOW COLUMNS FROM `t_topic` [ RunTime:0.000916s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\TopicModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_topic` ORDER BY id asc LIMIT 0,50   [ RunTime:0.001369s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_topic` LIMIT 1   [ RunTime:0.000637s ]
+
+[ 2014-12-04T16:38:35+08:00 ] 127.0.0.1 /System/SysLog/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000612s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.000856s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002172s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001177s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.001735s ]
+SQL: SHOW COLUMNS FROM `t_sys_log` [ RunTime:0.001859s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: where E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 139 行.
+
+[ 2014-12-04T16:39:08+08:00 ] 127.0.0.1 /System/Topic/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000987s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.001649s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003628s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001007s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.001336s ]
+SQL: SHOW COLUMNS FROM `t_topic` [ RunTime:0.001103s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\TopicModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_topic` ORDER BY id asc LIMIT 0,50   [ RunTime:0.000790s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_topic` LIMIT 1   [ RunTime:0.000642s ]
+
+[ 2014-12-04T16:44:29+08:00 ] 127.0.0.1 /System/Topic/edit?id=4&_=1417682669436
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001497s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.017464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.020051s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001311s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000893s ]
+SQL: SHOW COLUMNS FROM `t_topic` [ RunTime:0.001841s ]
+SQL: SELECT * FROM `t_topic` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.000797s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000291s ]
+NOTIC: [8] Undefined variable: thumb E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\b4ebf3fcf5c5c9f6b00b2d7e8f661aec.php 第 27 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\b4ebf3fcf5c5c9f6b00b2d7e8f661aec.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041182s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041370s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000823s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000969s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001153s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001309s ]
+
+[ 2014-12-04T16:55:45+08:00 ] 127.0.0.1 /System/Topic/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004781s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.002144s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008111s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001441s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000784s ]
+SQL: SHOW COLUMNS FROM `t_topic` [ RunTime:0.000967s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\TopicModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_topic` ORDER BY id asc LIMIT 0,50   [ RunTime:0.000667s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_topic` LIMIT 1   [ RunTime:0.000608s ]
+
+[ 2014-12-04T16:59:53+08:00 ] 127.0.0.1 /System/Topic/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000894s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.001596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003163s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001265s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000820s ]
+SQL: SHOW COLUMNS FROM `t_topic` [ RunTime:0.000980s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\TopicModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_topic` WHERE ( `id` = 4 ) ORDER BY id asc LIMIT 0,50   [ RunTime:0.000662s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_topic` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.000607s ]
+
+[ 2014-12-04T17:36:38+08:00 ] 127.0.0.1 /System/Topic/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000605s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.000817s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002176s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.003191s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.001866s ]
+SQL: SHOW COLUMNS FROM `t_topic` [ RunTime:0.002192s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\TopicModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_topic` ORDER BY id asc LIMIT 0,50   [ RunTime:0.000800s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_topic` LIMIT 1   [ RunTime:0.000971s ]
+
+[ 2014-12-04T18:19:58+08:00 ] 127.0.0.1 /System/Topic/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000615s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.000891s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002103s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001033s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000845s ]
+SQL: SHOW COLUMNS FROM `t_topic` [ RunTime:0.000984s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\TopicModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_topic` ORDER BY id asc LIMIT 0,50   [ RunTime:0.000625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_topic` LIMIT 1   [ RunTime:0.000577s ]
+
+[ 2014-12-04T18:20:03+08:00 ] 127.0.0.1 /System/Topic/add?_=1417688403004
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000757s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.001069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002661s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001065s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.001122s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000285s ]
+NOTIC: [8] Undefined index: id E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\b4ebf3fcf5c5c9f6b00b2d7e8f661aec.php 第 6 行.
+NOTIC: [8] Undefined index: name E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\b4ebf3fcf5c5c9f6b00b2d7e8f661aec.php 第 7 行.
+NOTIC: [8] Undefined index: courseId E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\b4ebf3fcf5c5c9f6b00b2d7e8f661aec.php 第 13 行.
+NOTIC: [8] Undefined index: sectionIds E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\b4ebf3fcf5c5c9f6b00b2d7e8f661aec.php 第 19 行.
+NOTIC: [8] Undefined index: imgUrl E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\b4ebf3fcf5c5c9f6b00b2d7e8f661aec.php 第 25 行.
+NOTIC: [8] Undefined variable: thumb E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\b4ebf3fcf5c5c9f6b00b2d7e8f661aec.php 第 27 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\b4ebf3fcf5c5c9f6b00b2d7e8f661aec.php 第 27 行.
+NOTIC: [8] Undefined index: name E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\b4ebf3fcf5c5c9f6b00b2d7e8f661aec.php 第 27 行.
+NOTIC: [8] Undefined index: description E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\b4ebf3fcf5c5c9f6b00b2d7e8f661aec.php 第 33 行.
+NOTIC: [8] Undefined index: sort E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\b4ebf3fcf5c5c9f6b00b2d7e8f661aec.php 第 38 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.072969s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.073144s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001296s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001472s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004567s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004813s ]
+
+[ 2014-12-04T18:20:50+08:00 ] 127.0.0.1 /System/Topic/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003057s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.001418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006112s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001628s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000742s ]
+SQL: SHOW COLUMNS FROM `t_topic` [ RunTime:0.000958s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\TopicModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_topic` ORDER BY id asc LIMIT 0,50   [ RunTime:0.000790s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_topic` LIMIT 1   [ RunTime:0.000636s ]
+
+[ 2014-12-04T18:21:02+08:00 ] 127.0.0.1 /System/Topic/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000607s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.000797s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001995s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001285s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000876s ]
+SQL: SHOW COLUMNS FROM `t_topic` [ RunTime:0.000913s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\TopicModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_topic` WHERE ( `status` = 0 ) ORDER BY id asc LIMIT 0,50   [ RunTime:0.008436s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_topic` WHERE ( `status` = 0 ) LIMIT 1   [ RunTime:0.000657s ]
+
+[ 2014-12-04T18:21:05+08:00 ] 127.0.0.1 /System/Topic/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000594s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.000917s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002106s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001044s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000804s ]
+SQL: SHOW COLUMNS FROM `t_topic` [ RunTime:0.000928s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\TopicModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_topic` WHERE ( `status` = 1 ) ORDER BY id asc LIMIT 0,50   [ RunTime:0.000856s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_topic` WHERE ( `status` = 1 ) LIMIT 1   [ RunTime:0.000635s ]
+
+[ 2014-12-04T18:23:19+08:00 ] 127.0.0.1 /System/Topic/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000940s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.001529s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003306s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001288s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.001234s ]
+SQL: SHOW COLUMNS FROM `t_topic` [ RunTime:0.000959s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\TopicModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_topic` WHERE ( `status` = 1 ) ORDER BY id asc LIMIT 0,50   [ RunTime:0.000743s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_topic` WHERE ( `status` = 1 ) LIMIT 1   [ RunTime:0.000602s ]
+
+[ 2014-12-04T18:29:23+08:00 ] 127.0.0.1 /System/Notice/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001133s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.001548s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003680s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001118s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000834s ]
+SQL: SHOW COLUMNS FROM `t_notice` [ RunTime:0.000881s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\NoticeModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_notice` ORDER BY id asc LIMIT 0,50   [ RunTime:0.000643s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_notice` LIMIT 1   [ RunTime:0.000577s ]
+
+[ 2014-12-04T18:31:34+08:00 ] 127.0.0.1 /System/Topic/add?_=1417689094713
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001898s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.003395s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006599s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.003878s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000920s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000133s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000348s ]
+NOTIC: [8] Undefined index: id E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\b4ebf3fcf5c5c9f6b00b2d7e8f661aec.php 第 6 行.
+NOTIC: [8] Undefined index: name E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\b4ebf3fcf5c5c9f6b00b2d7e8f661aec.php 第 7 行.
+NOTIC: [8] Undefined index: courseId E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\b4ebf3fcf5c5c9f6b00b2d7e8f661aec.php 第 13 行.
+NOTIC: [8] Undefined index: sectionIds E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\b4ebf3fcf5c5c9f6b00b2d7e8f661aec.php 第 19 行.
+NOTIC: [8] Undefined index: imgUrl E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\b4ebf3fcf5c5c9f6b00b2d7e8f661aec.php 第 25 行.
+NOTIC: [8] Undefined variable: thumb E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\b4ebf3fcf5c5c9f6b00b2d7e8f661aec.php 第 27 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\b4ebf3fcf5c5c9f6b00b2d7e8f661aec.php 第 27 行.
+NOTIC: [8] Undefined index: name E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\b4ebf3fcf5c5c9f6b00b2d7e8f661aec.php 第 27 行.
+NOTIC: [8] Undefined index: description E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\b4ebf3fcf5c5c9f6b00b2d7e8f661aec.php 第 33 行.
+NOTIC: [8] Undefined index: sort E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\b4ebf3fcf5c5c9f6b00b2d7e8f661aec.php 第 38 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017550s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017763s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001181s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001330s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001134s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001279s ]
+
+[ 2014-12-04T18:33:13+08:00 ] 127.0.0.1 /System/Notice/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000696s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.000965s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002559s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001131s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000928s ]
+SQL: SHOW COLUMNS FROM `t_notice` [ RunTime:0.000878s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\NoticeModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_notice` ORDER BY id asc LIMIT 0,50   [ RunTime:0.003459s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_notice` LIMIT 1   [ RunTime:0.000628s ]
+
+[ 2014-12-04T18:33:20+08:00 ] 127.0.0.1 /System/Notice/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000931s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.001491s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003114s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001012s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000741s ]
+SQL: SHOW COLUMNS FROM `t_notice` [ RunTime:0.000967s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\NoticeModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_notice` WHERE ( `status` = 1 ) ORDER BY id asc LIMIT 0,50   [ RunTime:0.000722s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_notice` WHERE ( `status` = 1 ) LIMIT 1   [ RunTime:0.000692s ]
+
+[ 2014-12-04T18:33:25+08:00 ] 127.0.0.1 /System/Notice/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000603s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.000786s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002089s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.005896s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000786s ]
+SQL: SHOW COLUMNS FROM `t_notice` [ RunTime:0.000836s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\NoticeModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_notice` ORDER BY id asc LIMIT 0,50   [ RunTime:0.000892s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_notice` LIMIT 1   [ RunTime:0.001318s ]
+
+[ 2014-12-04T18:33:31+08:00 ] 127.0.0.1 /System/Notice/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000691s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.001056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002464s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001803s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000784s ]
+SQL: SHOW COLUMNS FROM `t_notice` [ RunTime:0.000844s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\NoticeModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_notice` WHERE ( `id` = 14 ) ORDER BY id asc LIMIT 0,50   [ RunTime:0.000739s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_notice` WHERE ( `id` = 14 ) LIMIT 1   [ RunTime:0.000615s ]
+
+[ 2014-12-04T18:37:02+08:00 ] 127.0.0.1 /System/Notice/add?_=1417689422546
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001758s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.003117s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006391s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001231s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000854s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000477s ]
+NOTIC: [8] Undefined index: id E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\d6821132264b0d56937f045c75abb51c.php 第 7 行.
+NOTIC: [8] Undefined index: description E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\d6821132264b0d56937f045c75abb51c.php 第 8 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047743s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047946s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000888s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001033s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001336s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001500s ]
+
+[ 2014-12-04T18:37:18+08:00 ] 127.0.0.1 /System/Notice/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000603s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.000802s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002085s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.000935s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000749s ]
+SQL: SHOW COLUMNS FROM `t_notice` [ RunTime:0.001274s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\NoticeModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_notice` WHERE ( `id` = 14 ) ORDER BY id asc LIMIT 0,50   [ RunTime:0.000710s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_notice` WHERE ( `id` = 14 ) LIMIT 1   [ RunTime:0.000611s ]
+
+[ 2014-12-04T18:37:26+08:00 ] 127.0.0.1 /System/Notice/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001091s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.001317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003629s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001044s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.001071s ]
+SQL: SHOW COLUMNS FROM `t_notice` [ RunTime:0.000848s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\NoticeModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_notice` ORDER BY id asc LIMIT 0,50   [ RunTime:0.000713s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_notice` LIMIT 1   [ RunTime:0.000571s ]
+
+[ 2014-12-04T18:37:51+08:00 ] 127.0.0.1 /System/Notice/edit?id=16&_=1417689471704
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000860s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.000955s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003201s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001757s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000797s ]
+SQL: SHOW COLUMNS FROM `t_notice` [ RunTime:0.000962s ]
+SQL: SELECT * FROM `t_notice` WHERE ( `id` = 16 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000133s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000289s ]
+NOTIC: [8] Undefined index: description E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\d6821132264b0d56937f045c75abb51c.php 第 8 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012245s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012447s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000990s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001135s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001119s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001271s ]
+
+[ 2014-12-04T18:37:56+08:00 ] 127.0.0.1 /System/Notice/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002304s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.000986s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004450s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001042s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000760s ]
+SQL: SHOW COLUMNS FROM `t_notice` [ RunTime:0.000847s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\NoticeModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_notice` ORDER BY id asc LIMIT 0,50   [ RunTime:0.000713s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_notice` LIMIT 1   [ RunTime:0.000584s ]
+
+[ 2014-12-04T18:38:07+08:00 ] 127.0.0.1 /System/Notice/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000614s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.000832s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002136s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001067s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000802s ]
+SQL: SHOW COLUMNS FROM `t_notice` [ RunTime:0.001002s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\NoticeModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_notice` WHERE ( `id` = 16 ) ORDER BY id asc LIMIT 0,50   [ RunTime:0.002051s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_notice` WHERE ( `id` = 16 ) LIMIT 1   [ RunTime:0.000728s ]
+
+[ 2014-12-04T18:38:28+08:00 ] 127.0.0.1 /System/Notice/add?_=1417689508264
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001027s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.001387s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003427s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001444s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.001270s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000288s ]
+NOTIC: [8] Undefined index: id E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\d6821132264b0d56937f045c75abb51c.php 第 7 行.
+NOTIC: [8] Undefined index: description E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\d6821132264b0d56937f045c75abb51c.php 第 8 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015621s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015794s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001035s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001210s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001516s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001680s ]
+
+[ 2014-12-04T18:38:39+08:00 ] 127.0.0.1 /System/Notice/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001561s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.002394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005548s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001626s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000783s ]
+SQL: SHOW COLUMNS FROM `t_notice` [ RunTime:0.000786s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\NoticeModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_notice` WHERE ( `id` = 16 ) ORDER BY id asc LIMIT 0,50   [ RunTime:0.000728s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_notice` WHERE ( `id` = 16 ) LIMIT 1   [ RunTime:0.000635s ]
+
+[ 2014-12-04T18:39:52+08:00 ] 127.0.0.1 /System/Notice/add?_=1417689592599
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001457s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.003453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005917s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001729s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000866s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000308s ]
+NOTIC: [8] Undefined index: id E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\d6821132264b0d56937f045c75abb51c.php 第 7 行.
+NOTIC: [8] Undefined index: description E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\d6821132264b0d56937f045c75abb51c.php 第 8 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014920s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015106s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000933s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001141s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001294s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001456s ]
+
+[ 2014-12-04T18:39:57+08:00 ] 127.0.0.1 /System/Notice/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000713s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.000951s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002622s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001335s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000765s ]
+SQL: SHOW COLUMNS FROM `t_notice` [ RunTime:0.000842s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\NoticeModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_notice` WHERE ( `id` = 16 ) ORDER BY id asc LIMIT 0,50   [ RunTime:0.000692s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_notice` WHERE ( `id` = 16 ) LIMIT 1   [ RunTime:0.000647s ]
+
+[ 2014-12-04T18:41:18+08:00 ] 127.0.0.1 /System/Notice/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000756s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.000944s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002726s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001449s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000842s ]
+SQL: SHOW COLUMNS FROM `t_notice` [ RunTime:0.001130s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\NoticeModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_notice` ORDER BY id asc LIMIT 0,50   [ RunTime:0.000780s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_notice` LIMIT 1   [ RunTime:0.000651s ]
+
+[ 2014-12-04T18:41:24+08:00 ] 127.0.0.1 /System/Notice/del
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000970s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.001174s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003257s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001020s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000741s ]
+SQL: SHOW COLUMNS FROM `t_sys_log` [ RunTime:0.000792s ]
+SQL: INSERT INTO `t_sys_log` (`userName`,`controller`,`action`,`addTime`,`data`) VALUES ('admin','Notice','del',1417689684,'a:2:{s:3:\"get\";a:0:{}s:4:\"post\";a:1:{s:2:\"id\";s:2:\"17\";}}') [ RunTime:0.000556s ]
+SQL: SHOW COLUMNS FROM `t_notice` [ RunTime:0.000851s ]
+SQL: DELETE FROM `t_notice` WHERE ( `id` = 17 ) [ RunTime:0.000552s ]
+
+[ 2014-12-04T18:41:24+08:00 ] 127.0.0.1 /System/Notice/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000611s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.000824s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002127s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001009s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000810s ]
+SQL: SHOW COLUMNS FROM `t_notice` [ RunTime:0.000797s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\NoticeModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_notice` ORDER BY id asc LIMIT 0,50   [ RunTime:0.000813s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_notice` LIMIT 1   [ RunTime:0.000616s ]
+
+[ 2014-12-04T18:41:31+08:00 ] 127.0.0.1 /System/Notice/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001121s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.001244s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005271s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001622s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000726s ]
+SQL: SHOW COLUMNS FROM `t_notice` [ RunTime:0.000818s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\NoticeModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_notice` WHERE ( `status` = 0 ) ORDER BY id asc LIMIT 0,50   [ RunTime:0.000703s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_notice` WHERE ( `status` = 0 ) LIMIT 1   [ RunTime:0.001093s ]
+
+[ 2014-12-04T18:41:34+08:00 ] 127.0.0.1 /System/Notice/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000666s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.001068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002602s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001601s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000778s ]
+SQL: SHOW COLUMNS FROM `t_notice` [ RunTime:0.000887s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\NoticeModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_notice` WHERE ( `status` = 1 ) ORDER BY id asc LIMIT 0,50   [ RunTime:0.000747s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_notice` WHERE ( `status` = 1 ) LIMIT 1   [ RunTime:0.000688s ]
+
+[ 2014-12-04T18:41:40+08:00 ] 127.0.0.1 /System/Notice/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000609s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.000803s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002138s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001715s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000729s ]
+SQL: SHOW COLUMNS FROM `t_notice` [ RunTime:0.000864s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\NoticeModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_notice` ORDER BY id asc LIMIT 0,50   [ RunTime:0.000755s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_notice` LIMIT 1   [ RunTime:0.000881s ]
+
+[ 2014-12-04T18:41:49+08:00 ] 127.0.0.1 /System/Notice/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000606s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.000815s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002160s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001039s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000748s ]
+SQL: SHOW COLUMNS FROM `t_notice` [ RunTime:0.000832s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\NoticeModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_notice` WHERE ( `id` = 18 ) ORDER BY id asc LIMIT 0,50   [ RunTime:0.000677s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_notice` WHERE ( `id` = 18 ) LIMIT 1   [ RunTime:0.000580s ]
+
+[ 2014-12-04T18:41:54+08:00 ] 127.0.0.1 /System/Notice/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001668s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.002740s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006441s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001794s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000795s ]
+SQL: SHOW COLUMNS FROM `t_notice` [ RunTime:0.000861s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\NoticeModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_notice` ORDER BY id asc LIMIT 0,50   [ RunTime:0.000725s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_notice` LIMIT 1   [ RunTime:0.000781s ]
+
+[ 2014-12-04T18:41:56+08:00 ] 127.0.0.1 /System/Notice/edit?id=16&_=1417689716841
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000916s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.001777s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003792s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001266s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000796s ]
+SQL: SHOW COLUMNS FROM `t_notice` [ RunTime:0.000892s ]
+SQL: SELECT * FROM `t_notice` WHERE ( `id` = 16 ) LIMIT 1   [ RunTime:0.001142s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000272s ]
+NOTIC: [8] Undefined index: description E:\coding\zendstudio\Education_dev_platform\branches\v1\Runtime\Cache\System\d6821132264b0d56937f045c75abb51c.php 第 8 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013765s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013976s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001218s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001859s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002067s ]
+
+[ 2014-12-04T18:42:00+08:00 ] 127.0.0.1 /System/Notice/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000904s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.001151s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003088s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001232s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000891s ]
+SQL: SHOW COLUMNS FROM `t_notice` [ RunTime:0.000838s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\NoticeModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_notice` ORDER BY id asc LIMIT 0,50   [ RunTime:0.001644s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_notice` LIMIT 1   [ RunTime:0.000684s ]
+
+[ 2014-12-04T18:44:22+08:00 ] 127.0.0.1 /System/User/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000609s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.000801s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002098s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001091s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.001406s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.001255s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: where E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 139 行.
+NOTIC: [8] Undefined variable: where E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\UserModel.class.php 第 46 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 33 行.
+SQL: SELECT * FROM `t_user` ORDER BY userId desc LIMIT 0,50   [ RunTime:0.000896s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_user` LIMIT 1   [ RunTime:0.000699s ]
+
+[ 2014-12-04T19:22:59+08:00 ] 127.0.0.1 /System/Topic/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000698s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.000934s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002459s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.004368s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000824s ]
+SQL: SHOW COLUMNS FROM `t_topic` [ RunTime:0.000984s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: page E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\TopicModel.class.php 第 31 行.
+SQL: SELECT * FROM `t_topic` ORDER BY id asc LIMIT 0,50   [ RunTime:0.000766s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_topic` LIMIT 1   [ RunTime:0.000636s ]
+
+[ 2014-12-04T19:23:01+08:00 ] 127.0.0.1 /System/Role/index.html
+ERR: 无法加载控制器:Role
+
+[ 2014-12-04T19:23:09+08:00 ] 127.0.0.1 /System/Cache/update.html?_=1417692189160
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000745s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.001107s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002834s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.000963s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000740s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000313s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013565s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013768s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000730s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000869s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001044s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001178s ]
+
+[ 2014-12-04T19:23:28+08:00 ] 127.0.0.1 /System/SysLog/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000806s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.001343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003265s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.000940s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.000754s ]
+SQL: SHOW COLUMNS FROM `t_sys_log` [ RunTime:0.000841s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: where E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 139 行.
+
+[ 2014-12-04T19:23:29+08:00 ] 127.0.0.1 /System/SysUser/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000834s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.001266s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003079s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001591s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.001228s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: where E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 139 行.
+NOTIC: [8] Undefined variable: where E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\SysUserModel.class.php 第 63 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\SysUserModel.class.php 第 39 行.
+SQL: SELECT `id`,`name`,`realName`,`roleId`,`status`,`lastTime`,`lastIp`,`addTime` FROM `t_sys_user` ORDER BY id asc LIMIT 0,50   [ RunTime:0.001089s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_sys_user` LIMIT 1   [ RunTime:0.001134s ]
+
+[ 2014-12-04T19:23:30+08:00 ] 127.0.0.1 /System/SysRole/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000924s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.001190s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003111s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.001701s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.001546s ]
+SQL: SHOW COLUMNS FROM `t_sys_role` [ RunTime:0.001941s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: where E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 139 行.
+NOTIC: [8] Undefined variable: where E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\SysRoleModel.class.php 第 54 行.
+NOTIC: [8] Undefined index: fieldExcept E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 142 行.
+NOTIC: [8] Undefined index: sortOrder E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: pageSize E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 154 行.
+NOTIC: [8] Undefined index: field E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\SysRoleModel.class.php 第 31 行.
+SQL: SELECT `id`,`name`,`isSuper`,`addTime` FROM `t_sys_role` ORDER BY id asc LIMIT 0,50   [ RunTime:0.001393s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_sys_role` LIMIT 1   [ RunTime:0.001154s ]
+
+[ 2014-12-04T19:24:29+08:00 ] 127.0.0.1 /System/SysLog/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000728s ]
+INFO: Run Common\Behaviors\AppBeginBehavior [ RunTime:0.001074s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002709s ]
+SQL: SHOW COLUMNS FROM `t_sys_user` [ RunTime:0.002096s ]
+SQL: SELECT ru.id,ru.name,ru.realName,ru.roleId,ru.status,ru.lastTime,ru.lastIp,r.name as roleName,r.isSuper,r.auth FROM t_sys_user ru INNER JOIN t_sys_role r ON r.id=ru.roleId  WHERE ( ru.id = '1' ) LIMIT 1   [ RunTime:0.001944s ]
+SQL: SHOW COLUMNS FROM `t_sys_log` [ RunTime:0.000830s ]
+NOTIC: [8] Undefined index: isLogic E:\coding\zendstudio\Education_dev_platform\branches\v1\Application\Common\Model\BaseModel.class.php 第 138 行.
+

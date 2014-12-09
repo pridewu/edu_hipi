@@ -1,0 +1,31 @@
+<extend name="./base_list" />
+
+<block name="search">
+	ID：<input type="text" name="id" placeholder="公告ID" style="width: 50px"></input>
+<!-- 	知识点名称：<input type="text" name="name" placeholder="知识点名称" style="width: 100px"></input>
+	所属课程ID：<input type="text" name="courseId" placeholder="课程ID" style="width: 50px"></input> -->
+	状态：{$statusHtml}
+</block>
+<block name="datagrid_img">
+    <div id="datagrid_img" class="datagrid_img" style="display: none;">
+        
+    </div>
+</block>
+<block name="datagrid">
+		pagination:false, //分页栏 
+		idField : 'id',
+	    columns:[[ 
+            {field:'id',title:'ID',sortable:false,align:'right',width:60},
+            {field:'content',title:'公告名称',sortable:false,width:100},
+            {field:'noticeKey',title:'通知Key',sortable:false,width:100},
+            
+
+            {field:'status',title:'状态',sortable:true,width:60, 
+            	formatter:function(value,row,index){
+            		return value==1 ? "启用" : "<font color=red>禁用</font>";
+            	}
+            },            
+            {field:'addTime',title:'添加时间',sortable:true,width:180},
+        ]],
+</block>
+

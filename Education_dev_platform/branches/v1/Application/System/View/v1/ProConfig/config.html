@@ -1,0 +1,41 @@
+<form id="edit_form" method="post" style="padding:10px">
+<table class="editTable">
+	<tr>
+		<th>配置说明</th>
+		<td colspan="2">
+			数组(Array)类型配制格式：一行一个元素，每行格式请参考配制项说明<br/>
+			缩略图的配制格式：Key1=宽1*宽2,Key2=宽2*高2，如（b=600*600,m=200*200,s=80*80）
+		</td>
+	</tr>
+	<tr>
+		<th>配置名称</th>
+		<td>{$name}<input type="hidden" name="id" value="{$id}"/></td>
+		<td>&nbsp;</td>		
+	</tr>	
+	<tr><td colspan="3">&nbsp;</td></tr>
+	<foreach name="proConf" item="item" key="key">
+		<tr><th>{$item['title']}</th>
+			<td>
+				<switch name="item['type']">
+				<case value="string|numeric">
+					<input type="text" name="{$key}" value="{$item[value]}" style="width:320px;" /> 
+				</case>
+				<case value="bool">
+					<select name="{$key}" class="easyui-combobox">
+						<option value="1" {$item[value] ? 'selected' : ''}>是</option>
+						<option value="0" {$item[value] ? '' : 'selected'}>否</option>
+					</select>
+				</case>
+				<case value="array|textarea">
+					<php> if($item['readonly']) $readOnly = 'readonly="readonly"'; </php>
+                    <textarea name="{$key}" cols="{$item['cols']?$item['cols']:50}" 
+                    		rows="{$item['rows']?$item['rows']:8}" {$readOnly}>{$item[value]}
+                    </textarea>
+				</case>
+				</switch>
+			</td>
+			<td>值类型：{$item['type']}<br/>{$item['info']}</td>
+		</tr>
+	</foreach>	
+</table>
+</form>

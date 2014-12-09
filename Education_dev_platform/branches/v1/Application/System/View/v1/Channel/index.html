@@ -1,0 +1,75 @@
+<extend name="./base_list" />
+<block name="button">
+    <a href="#" class="easyui-linkbutton" iconCls="icon-sum" plain="true" {$buttonStyle['export']} onclick="return exportData();">导出数据</a>
+</block>
+<block name="datagrid_img">
+    <div id="datagrid_img" class="datagrid_img" style="display: none;">
+        
+    </div>
+</block>
+<block name="datagrid">
+		pagination:false, //分页栏 
+		idField : 'id',
+	    columns:[[ 
+            {field:'id',title:'ID',sortable:false,align:'right',width:60},
+            {field:'name',title:'栏目名称',sortable:false,width:200,
+            	formatter:function(value,row,index){
+            			return (new Array(parseInt(row.level)+1).join("　　")) + value;
+            		}
+            	},
+            {field:'chKey',title:'栏目KEY',sortable:false,width:100},
+			{field:'imgUrl',title:'图片路径',sortable:false,width:250},
+			{field:'linkUrl',title:'跳转地址',sortable:false,width:150},                        
+			{field:'isShow',title:'在首页导航中',sortable:true,width:100,
+				formatter:function(value,row,index){
+						return value==1 ? "显示" : "<font color=red>不显示</font>";
+					}
+				},                      
+            {field:'description',title:'栏目描述',sortable:false,width:150},  
+            {field:'level',title:'层级',sortable:false,width:60},
+            {field:'path',title:'路径',sortable:false,width:100},
+            {field:'childIds',title:'子节点串',sortable:false,width:180},           
+            {field:'sort',title:'排序',sortable:true,width:80},
+            {field:'status',title:'状态',sortable:true,width:60,
+            	formatter:function(value,row,index){
+            			return value==1 ? "启用" : "<font color=red>禁用</font>";
+            		}
+            	},            
+            {field:'addTime',title:'添加时间',sortable:true,width:180},
+        ]],
+        onMouseOverRow:function(e, rowIndex, rowData,field,value){
+            
+            if((field == 'imgUrl') && value != ''){
+               
+               var fieldValue = eval("rowData.realNavImgUrl");
+               var imgArr = fieldValue.split(",");
+               var imgStr = '';
+               //alert(imgArr.length);
+               if(imgArr.length>1){
+                    for(var i=0;i<(imgArr.length);i++){
+                         imgStr += '<p><img src="'+imgArr[i]+'" /></p>';
+                    }
+               }else{
+                    imgStr = '<p><img src="'+fieldValue+'" /></p>';
+               }
+               //alert(imgStr);
+               $("#datagrid_img").html(imgStr);
+               $("#datagrid_img").show();
+               if($("#datagrid_img").height()+e.pageY > $(document).height()){
+                    e.pageY = e.pageY-$("#datagrid_img").height();
+               }
+               //alert($(document).height());
+               $("#datagrid_img").css("left",e.pageX).css("top",e.pageY);
+            }
+       },  
+       onMouseOutRow:function(e,rowIndex, rowData){  
+           $("#datagrid_img").hide();
+       }, 
+</block>
+
+<block name="js">
+function exportData(){
+    window.location="__URL__/exportData";
+}
+</block>
+

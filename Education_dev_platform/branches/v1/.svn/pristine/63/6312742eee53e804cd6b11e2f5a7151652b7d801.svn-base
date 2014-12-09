@@ -1,0 +1,20 @@
+<form id="edit_form" method="post" style="padding:10px">
+<table class="editTable">
+	<tr><th>标题</th><td><input type="text" id="title" name="title" value="{$res['title']}" style="width:200px;"/><em>*</em><input type="hidden" name="id" value="{$res['id']}"/></td></tr>	
+	<tr><th>课时</th><td><input type="text" id="sectionId" name="sectionId" value="{$res['sectionId']}" style="width:200px;"/><em>*</em></td></tr>	
+	<tr><th>视频流code：</th><td><textarea name="content" id="content" cols="50" rows="5">{$res['content']}</textarea></td></tr>
+	<tr><th>所属资源商</th><td>{$rpHtml}<em>*</em></td></tr>	
+	<tr><th>资源外部ID</th><td><input type="text" id="outId" name="outId" value="{$res['outId']}"/></td></tr>	
+	<tr><th>播放权限</th><td><input type="text" id="playAuth" name="playAuth" value="{$res['playAuth']}"/><em>*</em> (0－免费,1-收费(也可按产品会员等级编号填写))</td></tr>
+	<tr><th>关键字列表</th><td><input type="text" id="keyList" name="keyList" value="{$res['keyList']}" style="width:200px;"/></td></tr>
+	<tr><th>单播价格</th><td><input type="text" id="price" name="price" value="{$res['price']}"/> (权限为1时且产品为单资源购买类型有效)</td></tr>
+	<tr><th>资源路径：</th><td><input type="text" id="libUrl" name="libUrl" value="{$res['libUrl']}" style="width:250px" /><em>*</em></td></tr>
+	<tr><th>资源导航图片</th><td><input type="text" id="imgUrl" name="imgUrl" value="{$res['imgUrl']}" style="width:250px" /><a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="upfileDialog(1,'{$thumb}','资源导航图片：{$res['imgUrl']}',0,0,'#imgUrl')"></a></td></tr>	
+	<tr><th>播放次数</th><td>{$res['playCount']}</td></tr>
+	<tr><th>点赞次数</th><td>{$res['praiseCount']}</td></tr>
+	<tr><th>收藏次数</th><td>	{$res['favorCount']}</td></tr>
+	<tr><th>资源描述</th><td><textarea name="description" id="description" cols="50" rows=5>{$res['description']}</textarea>	
+	<tr><th>资源排序</th><td><input type="text" id="sort" name="sort" value="{$res['sort']}"/></td></tr>	
+    <tr><th>开启状态</th><td>{$statusHtml} <em>*</em></td></tr>
+</table>
+</form>

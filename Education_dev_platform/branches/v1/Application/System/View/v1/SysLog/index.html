@@ -1,0 +1,38 @@
+<extend name="./base_list" />
+<block name="menu">
+		<div onclick="edit();" data-options="iconCls:'icon-edit'" {$buttonStyle['view']}>查看详情</div>
+</block>
+<block name="search">
+			管理员：<input type="text" name="where[userName]" style="width: 160px"></input>
+			页面：<input type="text" name="where[controller]" ></input>
+			操作： <input type="text" name="where[action]" ></input>
+			内容：<input type="text" name="where[data]"></input>
+			时间：
+			<input class="easyui-datetimebox" id="sDate" name="where[sDate]" data-options="required:true,showSeconds:false" value="{$sDate}" style="width:150px">&nbsp;
+			<input class="easyui-datetimebox" id="eDate" name="where[eDate]" data-options="required:true,showSeconds:false" value="{$eDate}" style="width:150px">
+</block>
+<block name="button">
+			<a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="edit()" {$buttonStyle['view']}>查看详情</a>
+			<a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="clearLog()" {$buttonStyle['clear']}>清除日志</a>
+</block>
+<block name="datagrid">		
+	sortName:'addTime',//默认排序字段
+	sortOrder:'desc',//默认排序方式 'desc' 'asc'
+	idField : 'id',
+    columns:[[  
+           {field:'id',title:'ID',sortable:true,align:'right',width:60},
+           {field:'addTime',title:'操作时间',sortable:true,width:160,formatter:function(value,row,index){return dateFormat(value);}},
+           {field:'userName',title:'管理员',sortable:true,width:100},
+           {field:'controller',title:'页面',sortable:true,width:120},
+           {field:'action',title:'操作',sortable:true,width:80},
+           {field:'data',title:'内容',width:500,},
+       ]],     
+</block>
+<block name="js">
+	function edit(rowIndex,rowData){
+		editData(rowIndex,rowData,"查看详情",'',datagrid,"__URL__/index",500,400);
+	}
+	function clearLog(){
+		postData("__URL__/clear",true,"数据清除后将无法恢复,您确定要清除一个月之前的日志?",datagrid,false);
+	}
+</block>
